@@ -198,7 +198,7 @@
             font-size: 0.8rem;
             letter-spacing: 0.3em;
             text-transform: uppercase;
-            color: var(--dusty-rose);
+            color: var(--text-dark);
             margin-bottom: 1.5rem;
             opacity: 0;
             animation: fadeUp 1s ease forwards 0.3s;
@@ -346,10 +346,14 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             max-width: 1000px;
             margin: 0 auto;
+        }
+
+        .services-grid .service-card:last-child:nth-child(3n+1) {
+            grid-column: 2;
         }
 
         .service-card {
@@ -393,7 +397,7 @@
 
         .education-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem;
             max-width: 1000px;
             margin: 0 auto;
@@ -409,6 +413,8 @@
             position: relative;
             overflow: hidden;
             cursor: pointer;
+            display: flex;
+            flex-direction: column;
         }
 
         .education-card::before {
@@ -475,7 +481,8 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            margin-top: 1rem;
+            margin-top: auto;
+            padding-top: 1rem;
             font-size: 0.8rem;
             color: var(--dusty-rose);
             text-transform: uppercase;
@@ -622,12 +629,6 @@
             width: 20px;
             height: 20px;
             color: var(--dusty-rose);
-        }
-
-        .contact-placeholder {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            font-style: italic;
         }
 
         /* Footer */
@@ -1038,6 +1039,7 @@
 <!-- Hero Section -->
 <section class="hero">
     <div class="hero-content">
+        <img src="photo_2026-02-19_18-54-15.jpg" alt="Виолетта Затолокина" style="width: 550px; height: 550px; border-radius: 50%; object-fit: cover; margin-bottom: 2rem; opacity: 0; animation: fadeUp 1s ease forwards 0.1s; box-shadow: 0 8px 32px rgba(125, 90, 80, 0.15);">
         <p class="hero-subtitle">Психолог · Онлайн консультации</p>
         <h1 class="hero-title">Пространство, где можно быть <span>собой</span></h1>
         <p class="hero-description">Бережная работа с вашим внутренним миром в клиент-центрированном подходе. Помогаю услышать себя и найти опору внутри.</p>
@@ -1051,7 +1053,7 @@
     <p class="section-subtitle reveal">Затолокина Виолетта Сергеевна</p>
     <div class="about-content">
         <p class="about-text reveal">
-            Я работаю в <em>клиент-центрированном подходе</em> — это значит, что в центре нашей работы всегда вы: ваши чувства, переживания и ваш уникальный путь к себе.
+            Я работаю в <em>интегративном подходе</em> с преимуществом клиент-центрированного направления — это значит, что в центре нашей работы всегда вы: ваши чувства, переживания и ваш уникальный путь к себе.
         </p>
         <p class="about-text reveal">
             Особое внимание уделяю <em>психосоматике</em> — связи между телом и психикой. Часто именно тело первым сигнализирует о том, что душа просит внимания.
@@ -1069,18 +1071,21 @@
     <div class="services-grid">
         <div class="service-card reveal">
             <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
             </svg>
-            <h3 class="service-title">Психосоматика</h3>
-            <p class="service-description">Работа с телесными проявлениями эмоциональных переживаний. Головные боли, напряжение, хроническая усталость — всё это может иметь психологические корни.</p>
+            <h3 class="service-title">Самопознание</h3>
+            <p class="service-description">Поиск себя, своих ценностей и смыслов. Работа с самооценкой, принятием себя и построением аутентичной жизни.</p>
         </div>
         <div class="service-card reveal">
             <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 6v6l4 2"/>
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                <path d="M12 8v4"/>
+                <circle cx="12" cy="16" r="0.5" fill="currentColor"/>
             </svg>
             <h3 class="service-title">Тревога и стресс</h3>
-            <p class="service-description">Помощь в понимании и проживании тревожных состояний. Поиск внутренних ресурсов и способов саморегуляции.</p>
+            <p class="service-description">Помощь в понимании и проживании тревожных состояний, преодолении панических атак. Поиск внутренних ресурсов и способов саморегуляции.</p>
         </div>
         <div class="service-card reveal">
             <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -1094,12 +1099,58 @@
         </div>
         <div class="service-card reveal">
             <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                <path d="M2 17l10 5 10-5"/>
-                <path d="M2 12l10 5 10-5"/>
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
             </svg>
-            <h3 class="service-title">Самопознание</h3>
-            <p class="service-description">Поиск себя, своих ценностей и смыслов. Работа с самооценкой, принятием себя и построением аутентичной жизни.</p>
+            <h3 class="service-title">Психосоматика</h3>
+            <p class="service-description">Работа с телесными проявлениями эмоциональных переживаний. Головные боли, напряжение, хроническая усталость — всё это может иметь психологические корни.</p>
+        </div>
+        <div class="service-card reveal">
+            <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                <path d="M8 15s1.5 2 4 2 4-2 4-2"/>
+                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                <line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
+            <h3 class="service-title">Эмоциональные переживания</h3>
+            <p class="service-description">Вина, стыд, обида, страх и другие сложные чувства. Помощь в осознании, проживании и трансформации эмоционального опыта.</p>
+        </div>
+        <div class="service-card reveal">
+            <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                <path d="M8 14s1.5-2 4-2 4 2 4 2"/>
+                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                <line x1="15" y1="9" x2="15.01" y2="9"/>
+            </svg>
+            <h3 class="service-title">Депрессивные состояния</h3>
+            <p class="service-description">Подавленность, потеря интереса и смысла, эмоциональное истощение. Бережная поддержка и поиск ресурсов для восстановления.</p>
+        </div>
+        <div class="service-card reveal">
+            <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+                <path d="M8 18l-2 2"/>
+                <path d="M16 18l2 2"/>
+            </svg>
+            <h3 class="service-title">Прокрастинация и лень</h3>
+            <p class="service-description">Откладывание дел, сложности с мотивацией и самоорганизацией. Исследование скрытых причин и восстановление способности действовать.</p>
+        </div>
+        <div class="service-card reveal">
+            <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                <line x1="18" y1="6" x2="6" y2="18" stroke-dasharray="2 2"/>
+            </svg>
+            <h3 class="service-title">Абьюзивные и созависимые отношения</h3>
+            <p class="service-description">Распознавание токсичных паттернов, восстановление границ и самоценности. Поддержка в выходе из деструктивных отношений.</p>
+        </div>
+        <div class="service-card reveal">
+            <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                <line x1="8" y1="8" x2="16" y2="16"/>
+                <line x1="16" y1="8" x2="8" y2="16"/>
+            </svg>
+            <h3 class="service-title">Самоагрессия</h3>
+            <p class="service-description">Самокритика, самонаказание, аутоагрессивное поведение. Помощь в понимании причин и формировании бережного отношения к себе.</p>
         </div>
     </div>
 </section>
@@ -1109,25 +1160,11 @@
     <h2 class="section-title reveal">Образование</h2>
     <p class="section-subtitle reveal">Квалификация и сертификаты</p>
     <div class="education-grid">
-        <div class="education-card reveal" onclick="openModal('cert1.png')">
-            <div class="education-year">2024 — 2025</div>
-            <h3 class="education-title">Актуальные проблемы в рамках клиент-центрированного консультирования</h3>
-            <p class="education-subtitle">Теория, практикум, интервизия и супервизия</p>
-            <p class="education-org">АНО ДПО «Институт повышения квалификации и профессиональной переподготовки»</p>
-            <p class="education-hours">72 часа · Удостоверение о повышении квалификации</p>
-            <div class="education-view-cert">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                    <circle cx="12" cy="12" r="3"/>
-                </svg>
-                Посмотреть документ
-            </div>
-        </div>
-        <div class="education-card reveal" onclick="openModal('cert2.png')">
-            <div class="education-year">2023 — 2024</div>
-            <h3 class="education-title">Основы психологического консультирования психосоматических аспектов клиента</h3>
-            <p class="education-org">Институт Практической Психологии и Постдипломного образования «Персона»</p>
-            <p class="education-hours">72 академических часа · Сертификат</p>
+        <div class="education-card reveal" onclick="openModal('img.png')">
+            <div class="education-year">2020 — 2025</div>
+            <h3 class="education-title">Психолог</h3>
+            <p class="education-hours">Воронежский Государственный Университет</p>
+            <p class="education-hours">Специальность: Психология служебной деятельности</p>
             <div class="education-view-cert">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
@@ -1139,8 +1176,31 @@
         <div class="education-card reveal" onclick="openModal('cert3.png')">
             <div class="education-year">2023 — 2024</div>
             <h3 class="education-title">Психологическое консультирование в рамках клиент-центрированного подхода</h3>
-            <p class="education-org">Институт Практической Психологии и Постдипломного образования «Персона»</p>
             <p class="education-hours">72 академических часа · Сертификат</p>
+            <div class="education-view-cert">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                Посмотреть документ
+            </div>
+        </div>
+        <div class="education-card reveal" onclick="openModal('cert2.png')">
+            <div class="education-year">2023 — 2024</div>
+            <h3 class="education-title">Основы психологического консультирования психосоматических аспектов клиента</h3>
+            <p class="education-hours">72 академических часа · Сертификат</p>
+            <div class="education-view-cert">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                Посмотреть документ
+            </div>
+        </div>
+        <div class="education-card reveal" onclick="openModal('cert1.png')">
+            <div class="education-year">2024 — 2025</div>
+            <h3 class="education-title">Актуальные проблемы в рамках клиент-центрированного консультирования</h3>
+            <p class="education-hours">72 часа</p>
             <div class="education-view-cert">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
@@ -1155,9 +1215,9 @@
 <!-- Quote Section -->
 <section class="quote-section">
     <blockquote class="quote reveal">
-        Когда меня слушают и слышат, я могу по-новому воспринять мир и продолжить путь
+        Самое мощное, что может сделать психолог —<br>это по-настоящему присутствовать
     </blockquote>
-    <p class="quote-author reveal">— Карл Роджерс</p>
+    <p class="quote-author reveal">— Дэйв Мирнс</p>
 </section>
 
 <!-- Process Section -->
@@ -1168,7 +1228,7 @@
         <div class="process-step reveal">
             <div class="step-number">01</div>
             <h3 class="step-title">Знакомство</h3>
-            <p class="step-description">Вы пишете мне, и мы договариваемся о первой встрече</p>
+            <p class="step-description">Вы связываетесь со мной, и мы договариваемся о первой встрече</p>
         </div>
         <div class="process-step reveal">
             <div class="step-number">02</div>
@@ -1199,15 +1259,15 @@
         <div class="contact-methods reveal">
             <div class="contact-item">
                 <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0h-.056zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                 </svg>
-                <span class="contact-placeholder">Telegram — скоро</span>
+                <a href="https://t.me/viilett" target="_blank" style="color: var(--text-dark); text-decoration: none;">Telegram</a>
             </div>
             <div class="contact-item">
                 <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14C20.67 22 22 20.67 22 15.07V8.93C22 3.33 20.67 2 15.07 2zm3.08 14.27c.12.25.12.51 0 .64-.12.12-.36.24-.6.24h-2.04c-.72 0-.96-.48-1.68-1.32-.6-.72-1.08-.84-1.2-.84-.24 0-.36.12-.36.6v1.08c0 .36-.12.48-.96.48-1.56 0-3.24-.96-4.44-2.64-2.16-3-2.76-5.28-2.76-5.76 0-.12.12-.36.6-.36h2.04c.36 0 .48.12.6.48.72 1.92 1.92 3.6 2.4 3.6.24 0 .36-.12.36-.72V9.71c-.12-1.08-.6-1.2-.6-1.56 0-.12.12-.36.36-.36h3.12c.36 0 .48.12.48.48v3.24c0 .36.12.48.24.48.24 0 .36-.12.72-.48 1.08-1.2 1.92-3.12 1.92-3.12.12-.24.36-.48.72-.48h2.04c.48 0 .6.24.48.48-.24 1.08-2.16 3.72-2.16 3.72-.24.36-.12.48 0 .72.6.84 2.16 2.4 2.16 2.4z"/>
                 </svg>
-                <span class="contact-placeholder">WhatsApp — скоро</span>
+                <a href="https://vk.com/viilett" target="_blank" style="color: var(--text-dark); text-decoration: none;">VK</a>
             </div>
         </div>
     </div>
@@ -1217,7 +1277,7 @@
 <footer>
     <div class="logo">Виолетта Затолокина</div>
     <p>Психолог · Клиент-центрированный подход · Психосоматика</p>
-    <p style="margin-top: 1rem; opacity: 0.7;">© 2025 Все права защищены</p>
+    <p style="margin-top: 1rem; opacity: 0.7;">© 2026 Все права защищены</p>
 </footer>
 
 <!-- Modal for certificates -->
