@@ -588,7 +588,7 @@
         }
 
         .contact-content {
-            max-width: 500px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -797,6 +797,10 @@
             .education-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .contact-info-grid {
+                grid-template-columns: repeat(3, 1fr) !important;
+            }
         }
 
         /* Mobile Responsive */
@@ -925,6 +929,17 @@
 
             .contact-text {
                 font-size: 1rem;
+            }
+
+            .contact-info-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+                padding: 0 !important;
+            }
+
+            .hero img {
+                width: 250px !important;
+                height: 250px !important;
             }
 
             .contact-item {
@@ -1056,9 +1071,6 @@
             Я работаю в <em>интегративном подходе</em> с преимуществом клиент-центрированного направления — это значит, что в центре нашей работы всегда вы: ваши чувства, переживания и ваш уникальный путь к себе.
         </p>
         <p class="about-text reveal">
-            Особое внимание уделяю <em>психосоматике</em> — связи между телом и психикой. Часто именно тело первым сигнализирует о том, что душа просит внимания.
-        </p>
-        <p class="about-text reveal">
             Консультации провожу онлайн, что позволяет вам находиться в комфортной обстановке и сохранять приватность.
         </p>
     </div>
@@ -1164,7 +1176,7 @@
             <div class="education-year">2020 — 2025</div>
             <h3 class="education-title">Психолог</h3>
             <p class="education-hours">Воронежский Государственный Университет</p>
-            <p class="education-hours">Специальность: Психология служебной деятельности</p>
+            <p class="education-hours" style="margin-top: 0.5rem;">Специальность: Психология служебной деятельности</p>
             <div class="education-view-cert">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
@@ -1176,7 +1188,7 @@
         <div class="education-card reveal" onclick="openModal('cert3.png')">
             <div class="education-year">2023 — 2024</div>
             <h3 class="education-title">Психологическое консультирование в рамках клиент-центрированного подхода</h3>
-            <p class="education-hours">72 академических часа · Сертификат</p>
+            <p class="education-hours">72 академических часа</p>
             <div class="education-view-cert">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
@@ -1188,7 +1200,7 @@
         <div class="education-card reveal" onclick="openModal('cert2.png')">
             <div class="education-year">2023 — 2024</div>
             <h3 class="education-title">Основы психологического консультирования психосоматических аспектов клиента</h3>
-            <p class="education-hours">72 академических часа · Сертификат</p>
+            <p class="education-hours">72 академических часа</p>
             <div class="education-view-cert">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
@@ -1200,7 +1212,7 @@
         <div class="education-card reveal" onclick="openModal('cert1.png')">
             <div class="education-year">2024 — 2025</div>
             <h3 class="education-title">Актуальные проблемы в рамках клиент-центрированного консультирования</h3>
-            <p class="education-hours">72 часа</p>
+            <p class="education-hours">72 академических часа</p>
             <div class="education-view-cert">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
@@ -1233,12 +1245,12 @@
         <div class="process-step reveal">
             <div class="step-number">02</div>
             <h3 class="step-title">Первая сессия</h3>
-            <p class="step-description">Знакомимся, вы рассказываете о себе, мы определяем запрос</p>
+            <p class="step-description">Знакомимся, вы рассказываете о себе, мы определяем запрос и назначаем количество встреч исходя из вашего запроса</p>
         </div>
         <div class="process-step reveal">
             <div class="step-number">03</div>
             <h3 class="step-title">Работа</h3>
-            <p class="step-description">Регулярные встречи раз в неделю по 50-60 минут онлайн</p>
+            <p class="step-description">Проводим регулярные встречи по 60 минут онлайн</p>
         </div>
         <div class="process-step reveal">
             <div class="step-number">04</div>
@@ -1254,8 +1266,22 @@
     <p class="section-subtitle reveal">Начните свой путь к себе</p>
     <div class="contact-content">
         <p class="contact-text reveal">
-            Напишите мне, чтобы записаться на консультацию или задать вопросы. Отвечаю в течение дня.
+            Напишите мне, чтобы записаться на консультацию или задать вопросы.
         </p>
+        <div class="contact-info-grid reveal" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 2.5rem auto; justify-items: center;">
+            <div style="background: rgba(255,255,255,0.7); padding: 2.5rem 2rem; border-radius: 16px; border: 1px solid rgba(201,168,157,0.2); text-align: center;">
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--soft-terracotta); margin-bottom: 0.5rem;">Знакомство</div>
+                <p style="font-size: 1rem; color: var(--text-light); line-height: 1.6;">Первая встреча 15–20 минут бесплатно:<br>для знакомства и понимания подходим ли мы друг другу</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.7); padding: 2.5rem 2rem; border-radius: 16px; border: 1px solid rgba(201,168,157,0.2); text-align: center;">
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--soft-terracotta); margin-bottom: 0.5rem;">Стоимость</div>
+                <p style="font-size: 1rem; color: var(--text-light); line-height: 1.6;">Консультация — 2000 ₽<br>Для студентов — 1500 ₽</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.7); padding: 2.5rem 2rem; border-radius: 16px; border: 1px solid rgba(201,168,157,0.15); text-align: center; border-color: var(--soft-terracotta);">
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--soft-terracotta); margin-bottom: 0.5rem;">Предложение марта</div>
+                <p style="font-size: 1rem; color: var(--text-light); line-height: 1.6;">Консультация — 1500 ₽<br>Для студентов — 1000 ₽</p>
+            </div>
+        </div>
         <div class="contact-methods reveal">
             <div class="contact-item">
                 <svg viewBox="0 0 24 24" fill="currentColor">
