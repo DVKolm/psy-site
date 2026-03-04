@@ -799,7 +799,7 @@
             }
 
             .contact-info-grid {
-                grid-template-columns: repeat(3, 1fr) !important;
+                grid-template-columns: repeat(2, 1fr) !important;
             }
         }
 
@@ -1271,17 +1271,13 @@
         <p class="contact-text reveal">
             Напишите мне, чтобы записаться на консультацию или задать вопросы.
         </p>
-        <div class="contact-info-grid reveal" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 2.5rem auto; justify-items: center;">
-            <div style="background: rgba(255,255,255,0.7); padding: 2.5rem 2rem; border-radius: 16px; border: 1px solid rgba(201,168,157,0.2); text-align: center;">
-                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--soft-terracotta); margin-bottom: 0.5rem;">Знакомство</div>
-                <p style="font-size: 1rem; color: var(--text-light); line-height: 1.6;">Первая встреча 15–20 минут бесплатно:<br>для знакомства и понимания подходим ли мы друг другу</p>
-            </div>
-            <div style="background: rgba(255,255,255,0.7); padding: 2.5rem 2rem; border-radius: 16px; border: 1px solid rgba(201,168,157,0.2); text-align: center;">
+        <div class="contact-info-grid reveal" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 2.5rem auto; max-width: 700px;">
+            <div style="background: rgba(255,255,255,0.7); padding: 2.5rem 2rem; border-radius: 16px; border: 1px solid rgba(201,168,157,0.2); text-align: center; display: flex; flex-direction: column; justify-content: center; width: 340px; height: 200px; box-sizing: border-box; justify-self: center;">
                 <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--soft-terracotta); margin-bottom: 0.5rem;">Стоимость</div>
                 <p style="font-size: 1rem; color: var(--text-light); line-height: 1.6;">Консультация — 2000 ₽<br>Для студентов — 1500 ₽</p>
             </div>
-            <div style="background: rgba(255,255,255,0.7); padding: 2.5rem 2rem; border-radius: 16px; border: 1px solid rgba(201,168,157,0.15); text-align: center; border-color: var(--soft-terracotta);">
-                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--soft-terracotta); margin-bottom: 0.5rem;">Предложение марта</div>
+            <div style="background: rgba(255,255,255,0.7); padding: 2.5rem 2rem; border-radius: 16px; border: 1px solid var(--soft-terracotta); text-align: center; display: flex; flex-direction: column; justify-content: center; width: 340px; height: 200px; box-sizing: border-box; justify-self: center;">
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--soft-terracotta); margin-bottom: 0.5rem;">Cпециальное предложение</div>
                 <p style="font-size: 1rem; color: var(--text-light); line-height: 1.6;">Консультация — 1500 ₽<br>Для студентов — 1000 ₽</p>
             </div>
         </div>
